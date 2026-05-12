@@ -8,6 +8,8 @@ import ComparisonView from './components/ComparisonView';
 import CrossPaperSearch from './components/CrossPaperSearch';
 import type { PaperSession, Node, GraphData } from './types';
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000').replace(/\/$/, '');
+
 function App() {
   const [papers, setPapers] = useState<PaperSession[]>([]);
   const [activePaperId, setActivePaperId] = useState<string | null>(null);
@@ -46,7 +48,7 @@ function App() {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('http://localhost:8000/extract', {
+      const response = await fetch(`${API_BASE_URL}/extract`, {
         method: 'POST',
         body: formData,
       });
