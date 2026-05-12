@@ -1,0 +1,252 @@
+.source-pane {
+  width: 32%;
+  min-width: 300px;
+  min-height: 0;
+  overflow-y: auto;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: rise 0.6s ease-out both;
+}
+
+.node-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  border-left: 6px solid;
+  background: var(--panel-2);
+}
+
+.node-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.node-title h3 {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.edited-badge {
+  background: var(--accent-2);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.node-meta {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.node-text-section,
+.dependencies-section,
+.pdf-section {
+  padding: 14px 20px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.node-text-section h4,
+.dependencies-section h4,
+.pdf-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.node-text {
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  resize: vertical;
+  background: #fff;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.save-btn,
+.cancel-btn,
+.edit-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.save-btn {
+  background: var(--accent);
+  color: #fff;
+  flex: 1;
+}
+
+.save-btn:hover {
+  transform: translateY(-1px);
+}
+
+.cancel-btn {
+  background: #dc2626;
+  color: #fff;
+  flex: 1;
+}
+
+.cancel-btn:hover {
+  transform: translateY(-1px);
+}
+
+.edit-btn {
+  background: var(--accent-3);
+  color: #fff;
+  width: 100%;
+}
+
+.edit-btn:hover {
+  transform: translateY(-1px);
+}
+
+.dependency-list {
+  margin-bottom: 12px;
+  padding: 8px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.dependency-list strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.dependency-list p {
+  margin: 4px 0;
+  color: var(--text-muted);
+}
+
+.relation {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 2px 4px;
+  background: rgba(15, 118, 110, 0.14);
+  color: var(--accent);
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.no-deps {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.pdf-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.pdf-controls button {
+  padding: 6px 8px;
+  background: var(--accent-3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.pdf-controls button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.pdf-controls button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.page-input {
+  width: 50px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 12px;
+  background: #fff;
+}
+
+.page-count {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.pdf-viewer {
+  flex: 1;
+  background: #eef3f8;
+  border-radius: 8px;
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+}
+
+.pdf-viewer canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.pdf-section {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  .source-pane {
+    width: 100%;
+  }
+}

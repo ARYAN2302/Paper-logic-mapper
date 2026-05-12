@@ -1,0 +1,68 @@
+.cross-paper-search {
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.cross-paper-search h4 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.no-results {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin: 0;
+}
+
+.results-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.result-paper {
+  margin-bottom: 10px;
+}
+
+.paper-name {
+  margin: 0 0 6px 0;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.result-node {
+  display: block;
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 11px;
+  transition: all 0.2s;
+}
+
+.result-node:hover {
+  background: #eef3f8;
+  border-color: var(--accent);
+}
+
+.node-id {
+  display: block;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.node-type {
+  display: block;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}

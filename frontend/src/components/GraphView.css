@@ -1,0 +1,221 @@
+.graph-view {
+  flex: 1.1;
+  min-width: 320px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: var(--radius);
+  box-shadow: 0 22px 56px -34px rgba(15, 23, 42, 0.95);
+  overflow: hidden;
+  animation: rise 0.6s ease-out both;
+  position: relative;
+}
+
+.graph-header {
+  padding: 15px 18px 13px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  gap: 14px;
+}
+
+.graph-header h3 {
+  font-size: 16px;
+  color: #e2e8f0;
+}
+
+.graph-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.graph-stats span {
+  padding-right: 8px;
+  border-right: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.graph-stats span:last-child {
+  border-right: 0;
+}
+
+.graph-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.export-btn,
+.graph-tool-btn {
+  padding: 6px 12px;
+  background: rgba(30, 41, 59, 0.78);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 18px -14px rgba(15, 23, 42, 0.9);
+}
+
+.graph-tool-btn {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.export-btn:hover,
+.graph-tool-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px -16px rgba(15, 23, 42, 0.9);
+  border-color: rgba(226, 232, 240, 0.42);
+}
+
+.graph-legend {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  padding: 10px 18px;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  padding: 3px 8px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 7px;
+  color: #cbd5e1;
+  font-size: 11px;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.legend-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(248, 250, 252, 0.14);
+}
+
+.legend-item strong {
+  color: #f8fafc;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.graph-container {
+  flex: 1;
+  width: 100%;
+  background:
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    #111827;
+  background-size: 36px 36px, 36px 36px, auto;
+}
+
+.graph-minimap {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 140px;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.78);
+  box-shadow: 0 12px 24px -18px rgba(15, 23, 42, 0.9);
+  overflow: hidden;
+}
+
+.graph-minimap img {
+  display: none;
+}
+
+.hover-card {
+  position: absolute;
+  min-width: 220px;
+  max-width: 280px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 8px;
+  padding: 10px 12px;
+  pointer-events: none;
+  box-shadow: 0 18px 30px -20px rgba(15, 23, 42, 0.9);
+  z-index: 3;
+}
+
+.hover-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.hover-title strong {
+  font-size: 12px;
+  color: #f8fafc;
+}
+
+.hover-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+.hover-preview {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #cbd5f5;
+  margin: 0 0 6px;
+}
+
+.hover-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.type-Theorem {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fecaca;
+}
+
+.type-Lemma {
+  background: rgba(34, 197, 94, 0.2);
+  color: #bbf7d0;
+}
+
+.type-Definition {
+  background: rgba(59, 130, 246, 0.2);
+  color: #bfdbfe;
+}
+
+.type-Assumption {
+  background: rgba(234, 179, 8, 0.2);
+  color: #fde68a;
+}
+
+.type-Claim {
+  background: rgba(168, 85, 247, 0.2);
+  color: #e9d5ff;
+}
+
+.type-Proof {
+  background: rgba(107, 114, 128, 0.2);
+  color: #e5e7eb;
+}

@@ -1,0 +1,60 @@
+.comparison-view {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.comparison-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, #fff, #f8fafc);
+}
+
+.comparison-header h3 {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.comparison-header p {
+  margin: 5px 0 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.comparison-graphs {
+  flex: 1;
+  display: flex;
+  gap: 0;
+}
+
+.comparison-graph {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+}
+
+.comparison-graph:last-child {
+  border-right: none;
+}
+
+.comparison-graph h4 {
+  padding: 10px 15px;
+  margin: 0;
+  background: #eef3f8;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text);
+  word-break: break-word;
+}
+
+.comparison-graph .graph-container {
+  flex: 1;
+  background: #f8fafc;
+}
